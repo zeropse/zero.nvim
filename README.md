@@ -123,23 +123,24 @@ The configuration requires:
 
 Additional dependencies may be required by individual language servers, formatters, linters, or debuggers.
 
-## Supported Languages and Tooling
+## Supported Languages and Tooling Extras
 
-The configuration includes tooling for:
+All language and tooling modules configured in [`lua/config/lazy.lua`](./lua/config/lazy.lua):
 
-| Language / Technology   | Tooling                                |
-| :---------------------- | :------------------------------------- |
-| JavaScript / TypeScript | TypeScript LSP, Prettier, Tailwind CSS |
-| React                   | JSX/TSX support and related tooling    |
-| Python                  | Pyright, Ruff formatter and linter     |
-| Rust                    | `rust-analyzer`, `rustfmt`             |
-| Markdown                | Enhanced syntax and Markdown tooling   |
-| JSON / YAML             | Schema validation and language support |
-| Docker                  | Dockerfile language support            |
-| Terraform               | HCL language support                   |
-| Debugging               | `nvim-dap`                             |
-
-The exact tools installed by Mason depend on the configured LazyVim extras and plugin specifications.
+| Category / Language | Extra Module (`lazy.lua`) | Tooling & Capabilities |
+| :--- | :--- | :--- |
+| **TypeScript / JavaScript** | `lang.typescript` | `vtsls`/`tsserver` LSP, TSX/JSX syntax parsing |
+| **Python** | `lang.python` | `pyright` LSP, `ruff` linter and formatter, `.venv` detection |
+| **Tailwind CSS** | `lang.tailwind` | `tailwindcss` IntelliSense LSP, CSS color highlight previews |
+| **SQL** | `lang.sql` | SQL completion, syntax highlighting & query formatting |
+| **JSON / YAML** | `lang.json` | `jsonls` with `SchemaStore.nvim` validation |
+| **Markdown** | `lang.markdown` | Enhanced syntax parsing, previewing, and headings navigation |
+| **Docker** | `lang.docker` | `dockerls` for Dockerfile and Compose files |
+| **Terraform / HCL** | `lang.terraform` | `terraformls` for Infrastructure-as-Code linting & formatting |
+| **Lua** | *(Built-in)* | `lua_ls` LSP + `stylua` code formatter |
+| **Code Formatting** | `formatting.prettier` | Prettier for HTML, CSS, JS, TS, JSON, YAML, Markdown |
+| **AI Assistance** | `ai.copilot` & `ai.copilot-chat` | GitHub Copilot ghost text completions & Copilot Chat (`<leader>aa`) |
+| **Interactive Debugging** | `dap.core` & `dap.nlua` | `nvim-dap` breakpoints, stepping, REPL & Lua debugging |
 
 ## Keybindings
 
