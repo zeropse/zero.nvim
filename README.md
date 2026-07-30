@@ -18,7 +18,7 @@ A personal Neovim configuration built on [LazyVim](https://github.com/LazyVim/La
 Using Homebrew:
 
 ```bash
-brew install neovim ripgrep fd gcc
+brew install neovim ripgrep fd gcc lazygit
 brew install --cask font-jetbrains-mono-nerd-font
 ```
 
