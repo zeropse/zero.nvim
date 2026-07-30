@@ -1,0 +1,21 @@
+name: ✨ Feature Request
+description: Suggest an idea or feature for zero.nvim
+title: "[FEAT]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: feature
+    attributes:
+      label: Feature Proposal
+      description: Describe the feature you would like added.
+      placeholder: I would like to propose...
+    validations:
+      required: true
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation & Use Case
+      description: Why is this feature useful?
+      placeholder: This would be useful because...
+    validations:
+      required: false
