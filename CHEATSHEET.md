@@ -80,7 +80,18 @@
 
 ---
 
-## 🐛 Debugging (DAP Core)
+## 🤖 AI Coding & Copilot
+
+| Mode | Shortcut | Description |
+| :--- | :--- | :--- |
+| **Insert** | `<Tab>` | Accept inline ghost text suggestion |
+| **Normal** | `:Copilot auth` | Authenticate GitHub Copilot account |
+| **Normal** | `<leader>aa` | Open Copilot Chat panel |
+| **Normal** | `<leader>ae` | Explain selected code |
+| **Normal** | `<leader>af` | Fix diagnostic error / code issue |
+| **Normal** | `<leader>at` | Generate unit tests |
+
+## 🐛 Debugging (DAP Core & Lua)
 
 | Mode       | Shortcut     | Description               |
 | :--------- | :----------- | :------------------------ |
