@@ -1,21 +1,20 @@
 return {
   {
-    'folke/tokyonight.nvim',
+    'shaunsingh/nord.nvim',
     lazy = false,
     priority = 1000,
-    opts = {
-      style = 'moon',
-      transparent = true,
-      styles = {
-        sidebars = 'transparent',
-        floats = 'transparent',
-      },
-    },
+    config = function()
+      vim.g.nord_contrast = true
+      vim.g.nord_borders = false
+      vim.g.nord_disable_background = true
+      vim.g.nord_italic = false
+      require('nord').set()
+    end,
   },
   {
     'LazyVim/LazyVim',
     opts = {
-      colorscheme = 'tokyonight-moon',
+      colorscheme = 'nord',
     },
   },
 }
