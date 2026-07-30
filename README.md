@@ -59,10 +59,7 @@ To remove the configuration from your system:
 # 1. Remove the Neovim configuration directory
 rm -rf ~/.config/nvim
 
-# 2. (Optional) Restore previous configuration backup if available
-mv ~/.config/nvim.bak ~/.config/nvim 2>/dev/null
-
-# 3. (Optional) Remove all installed plugins, state, and cache data
+# 2. (Optional) Remove all installed plugins, state, and cache data
 rm -rf ~/.local/share/nvim
 rm -rf ~/.local/state/nvim
 rm -rf ~/.cache/nvim
