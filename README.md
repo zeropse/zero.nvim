@@ -161,4 +161,4 @@ The following commands are useful for managing the configuration from within Neo
 
 ## License
 
-MIT © zeropse
+This project is licensed under the [MIT License](./LICENSE) - Copyright (c) 2026 Srijit Dey. See the [LICENSE](./LICENSE) file for details.
