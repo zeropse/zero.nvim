@@ -51,6 +51,23 @@ nvim
 
 On the first launch, LazyVim and `lazy.nvim` install the configured plugins. Mason then installs the configured language servers, formatters, linters, and debugging tools.
 
+## Uninstallation
+
+To remove the configuration from your system:
+
+```bash
+# 1. Remove the Neovim configuration directory
+rm -rf ~/.config/nvim
+
+# 2. (Optional) Restore previous configuration backup if available
+mv ~/.config/nvim.bak ~/.config/nvim 2>/dev/null
+
+# 3. (Optional) Remove all installed plugins, state, and cache data
+rm -rf ~/.local/share/nvim
+rm -rf ~/.local/state/nvim
+rm -rf ~/.cache/nvim
+```
+
 ## Features
 
 - **Plugin Management** — Uses LazyVim and `lazy.nvim` for plugin management and updates.
