@@ -24,3 +24,7 @@ opt.undofile = true
 opt.updatetime = 250
 opt.timeoutlen = 300
 opt.termguicolors = true
+
+-- Disable unused legacy providers
+vim.g.loaded_perl_provider = 0
+vim.g.loaded_ruby_provider = 0
