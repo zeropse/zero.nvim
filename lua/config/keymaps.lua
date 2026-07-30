@@ -6,7 +6,7 @@ local opts = { noremap = true, silent = true }
 
 -- Save & Quit
 map('n', '<C-s>', '<cmd>w<CR>', opts)
-map('n', '<leader>sn', '<cmd>noautocmd w<CR>', opts)
+map('n', '<leader>W', '<cmd>noautocmd w<CR>', opts)
 map('n', '<C-q>', '<cmd>q<CR>', opts)
 
 -- Delete character without yanking
@@ -29,7 +29,7 @@ map('n', '<Right>', ':vertical resize +2<CR>', opts)
 -- Buffers
 map('n', '<Tab>', ':bnext<CR>', opts)
 map('n', '<S-Tab>', ':bprevious<CR>', opts)
-map('n', '<leader>b', '<cmd>enew<CR>', opts)
+map('n', '<leader>bn', '<cmd>enew<CR>', opts)
 
 -- Window splits
 map('n', '<leader>v', '<C-w>v', opts)

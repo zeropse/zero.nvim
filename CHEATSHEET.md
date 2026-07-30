@@ -9,7 +9,7 @@
 | Mode       | Shortcut     | Description                                           |
 | :--------- | :----------- | :---------------------------------------------------- |
 | **Normal** | `<C-s>`      | Save current file                                     |
-| **Normal** | `<leader>sn` | Save without auto-formatting (`noautocmd w`)          |
+| **Normal** | `<leader>W`  | Save without auto-formatting (`noautocmd w`)          |
 | **Normal** | `<C-q>`      | Quit editor                                           |
 | **Normal** | `x`          | Delete single character without yanking               |
 | **Visual** | `p`          | Preserve last yanked text when pasting over selection |
@@ -37,7 +37,7 @@
 | Mode       | Shortcut                    | Description                          |
 | :--------- | :-------------------------- | :----------------------------------- |
 | **Normal** | `<Tab>` / `<S-Tab>`         | Switch to Next / Previous buffer tab |
-| **Normal** | `<leader>b`                 | Open new empty buffer                |
+| **Normal** | `<leader>bn`                | Open new empty buffer                |
 | **Normal** | `<leader>to`                | Open new tab                         |
 | **Normal** | `<leader>tx`                | Close current tab                    |
 | **Normal** | `<leader>tn` / `<leader>tp` | Navigate to Next / Previous tab      |
