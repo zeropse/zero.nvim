@@ -1,13 +1,55 @@
 # zero.nvim
 
 <p align="left">
-  <img src="https://img.shields.io/badge/Neovim-v0.10+-57AD31?style=for-the-badge&logo=neovim&logoColor=white" alt="Neovim Supported">
-  <img src="https://img.shields.io/badge/Framework-LazyVim-2e3440?style=for-the-badge&logo=neovim&logoColor=white" alt="LazyVim Framework">
-  <img src="https://img.shields.io/badge/Auto--Upgrades-Enabled-blue?style=for-the-badge" alt="Auto Upgrades">
-  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License">
+  <img src="https://img.shields.io/badge/Neovim-57A143?style=for-the-badge&logo=neovim&logoColor=white" alt="Neovim">
+  <img src="https://img.shields.io/badge/LazyVim-2E3440?style=for-the-badge&logo=neovim&logoColor=white" alt="LazyVim">
+  <img src="https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white" alt="Lua">
+  <img src="https://img.shields.io/badge/LSP-7C3AED?style=for-the-badge&logo=neovim&logoColor=white" alt="LSP">
+  <img src="https://img.shields.io/badge/Mason-FFB000?style=for-the-badge&logo=neovim&logoColor=white" alt="Mason">
+  <img src="https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge" alt="MIT License">
 </p>
 
 A personal Neovim configuration built on [LazyVim](https://github.com/LazyVim/LazyVim), with LSP support, formatting, linting, debugging, fuzzy finding, file navigation, and customized keybindings.
+
+## Installation
+
+### macOS
+
+Using Homebrew:
+
+```bash
+brew install neovim ripgrep fd gcc
+brew install --cask font-jetbrains-mono-nerd-font
+```
+
+### Arch Linux
+
+```bash
+sudo pacman -S neovim ripgrep fd gcc
+```
+
+### Ubuntu / Debian
+
+```bash
+sudo apt update
+sudo apt install neovim ripgrep fd-find build-essential
+```
+
+### Clone the Configuration
+
+Clone the repository directly into Neovim's configuration directory:
+
+```bash
+git clone https://github.com/zeropse/zero.nvim.git ~/.config/nvim
+```
+
+Launch Neovim:
+
+```bash
+nvim
+```
+
+On the first launch, LazyVim and `lazy.nvim` install the configured plugins. Mason then installs the configured language servers, formatters, linters, and debugging tools.
 
 ## Features
 
@@ -66,46 +108,6 @@ The configuration requires:
 - **Nerd Font** — required for terminal icons
 
 Additional dependencies may be required by individual language servers, formatters, linters, or debuggers.
-
-## Installation
-
-### macOS
-
-Using Homebrew:
-
-```bash
-brew install neovim ripgrep fd gcc
-brew install --cask font-jetbrains-mono-nerd-font
-```
-
-### Arch Linux
-
-```bash
-sudo pacman -S neovim ripgrep fd gcc
-```
-
-### Ubuntu / Debian
-
-```bash
-sudo apt update
-sudo apt install neovim ripgrep fd-find build-essential
-```
-
-### Clone the Configuration
-
-Clone the repository directly into Neovim's configuration directory:
-
-```bash
-git clone https://github.com/zeropse/zero.nvim.git ~/.config/nvim
-```
-
-Launch Neovim:
-
-```bash
-nvim
-```
-
-On the first launch, LazyVim and `lazy.nvim` install the configured plugins. Mason then installs the configured language servers, formatters, linters, and debugging tools.
 
 ## Supported Languages and Tooling
 
