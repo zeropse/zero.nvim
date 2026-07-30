@@ -28,9 +28,6 @@ zero.nvim/
 ├── .stylua.toml
 ├── CHEATSHEET.md
 ├── README.md
-├── .github/
-│   └── workflows/
-│       └── ci.yml
 └── lua/
     ├── config/
     │   ├── autocmds.lua
@@ -49,14 +46,13 @@ zero.nvim/
 
 ### Configuration Overview
 
-| Directory / File           | Purpose                                               |
-| :------------------------- | :---------------------------------------------------- |
-| `init.lua`                 | Main configuration entry point                        |
-| `lua/config/`              | Core Neovim configuration and LazyVim setup           |
-| `lua/plugins/`             | Plugin specifications and custom plugin configuration |
-| `CHEATSHEET.md`            | Keybinding and command reference                      |
-| `.stylua.toml`             | StyLua formatting configuration                       |
-| `.github/workflows/ci.yml` | GitHub Actions workflow for configuration checks      |
+| Directory / File | Purpose                                               |
+| :--------------- | :---------------------------------------------------- |
+| `init.lua`       | Main configuration entry point                        |
+| `lua/config/`    | Core Neovim configuration and LazyVim setup           |
+| `lua/plugins/`   | Plugin specifications and custom plugin configuration |
+| `CHEATSHEET.md`  | Keybinding and command reference                      |
+| `.stylua.toml`   | StyLua formatting configuration                       |
 
 ## Requirements
 
