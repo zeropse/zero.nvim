@@ -5,11 +5,7 @@ return {
     opts = {
       dashboard = {
         preset = {
-          header = [[
- ⚡ ZERO.NVIM 
-───────────────
- Modern Neovim 
-          ]],
+          header = " ⚡ ZERO.NVIM "
         },
       },
     },
