@@ -25,14 +25,14 @@ brew install --cask font-jetbrains-mono-nerd-font
 ### Arch Linux
 
 ```bash
-sudo pacman -S neovim ripgrep fd gcc
+sudo pacman -S neovim ripgrep fd gcc lazygit
 ```
 
 ### Ubuntu / Debian
 
 ```bash
 sudo apt update
-sudo apt install neovim ripgrep fd-find build-essential
+sudo apt install neovim ripgrep fd-find build-essential lazygit
 ```
 
 ### Clone the Configuration
