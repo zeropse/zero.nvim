@@ -127,20 +127,21 @@ Additional dependencies may be required by individual language servers, formatte
 
 All language and tooling modules configured in [`lua/config/lazy.lua`](./lua/config/lazy.lua):
 
-| Category / Language | Extra Module (`lazy.lua`) | Tooling & Capabilities |
-| :--- | :--- | :--- |
-| **TypeScript / JavaScript** | `lang.typescript` | `vtsls`/`tsserver` LSP, TSX/JSX syntax parsing |
-| **Python** | `lang.python` | `pyright` LSP, `ruff` linter and formatter, `.venv` detection |
-| **Tailwind CSS** | `lang.tailwind` | `tailwindcss` IntelliSense LSP, CSS color highlight previews |
-| **SQL** | `lang.sql` | SQL completion, syntax highlighting & query formatting |
-| **JSON / YAML** | `lang.json` | `jsonls` with `SchemaStore.nvim` validation |
-| **Markdown** | `lang.markdown` | Enhanced syntax parsing, previewing, and headings navigation |
-| **Docker** | `lang.docker` | `dockerls` for Dockerfile and Compose files |
-| **Terraform / HCL** | `lang.terraform` | `terraformls` for Infrastructure-as-Code linting & formatting |
-| **Lua** | *(Built-in)* | `lua_ls` LSP + `stylua` code formatter |
-| **Code Formatting** | `formatting.prettier` | Prettier for HTML, CSS, JS, TS, JSON, YAML, Markdown |
-| **AI Assistance** | `ai.copilot` & `ai.copilot-chat` | GitHub Copilot ghost text completions & Copilot Chat (`<leader>aa`) |
-| **Interactive Debugging** | `dap.core` & `dap.nlua` | `nvim-dap` breakpoints, stepping, REPL & Lua debugging |
+| Category / Language         | Extra Module (`lazy.lua`)        | Tooling & Capabilities                                              |
+| :-------------------------- | :------------------------------- | :------------------------------------------------------------------ |
+| **TypeScript / JavaScript** | `lang.typescript`                | `vtsls`/`tsserver` LSP, TSX/JSX syntax parsing                      |
+| **Python**                  | `lang.python`                    | `pyright` LSP, `ruff` linter and formatter, `.venv` detection       |
+| **HTML & Vanilla CSS** | `formatting.prettier` & *(Built-in)* | `html` & `cssls` LSPs, Treesitter syntax, auto-closing tags (`nvim-ts-autotag`), and Prettier formatting |
+| **Tailwind CSS**            | `lang.tailwind`                  | `tailwindcss` IntelliSense LSP, CSS color highlight previews        |
+| **SQL**                     | `lang.sql`                       | SQL completion, syntax highlighting & query formatting              |
+| **JSON / YAML**             | `lang.json`                      | `jsonls` with `SchemaStore.nvim` validation                         |
+| **Markdown**                | `lang.markdown`                  | Enhanced syntax parsing, previewing, and headings navigation        |
+| **Docker**                  | `lang.docker`                    | `dockerls` for Dockerfile and Compose files                         |
+| **Terraform / HCL**         | `lang.terraform`                 | `terraformls` for Infrastructure-as-Code linting & formatting       |
+| **Lua**                     | _(Built-in)_                     | `lua_ls` LSP + `stylua` code formatter                              |
+| **Code Formatting**         | `formatting.prettier`            | Prettier for HTML, CSS, JS, TS, JSON, YAML, Markdown                |
+| **AI Assistance**           | `ai.copilot` & `ai.copilot-chat` | GitHub Copilot ghost text completions & Copilot Chat (`<leader>aa`) |
+| **Interactive Debugging**   | `dap.core` & `dap.nlua`          | `nvim-dap` breakpoints, stepping, REPL & Lua debugging              |
 
 ## Keybindings
 
