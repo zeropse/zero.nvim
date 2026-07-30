@@ -48,11 +48,15 @@ brew install --cask font-jetbrains-mono-nerd-font
 mv ~/.config/nvim ~/.config/nvim.bak 2>/dev/null
 ```
 
-### Step 3: Symlink `zero.nvim`
+### Step 3: Install Configuration to `~/.config/nvim`
 
 ```bash
+# Option A: Copy configuration directly to ~/.config/nvim
 mkdir -p ~/.config
-ln -s /Users/zeropse/Developer/zero.nvim ~/.config/nvim
+cp -r /Users/zeropse/Developer/zero.nvim ~/.config/nvim
+
+# Option B: Clone repository directly to ~/.config/nvim
+git clone https://github.com/zeropse/zero.nvim.git ~/.config/nvim
 ```
 
 ### Step 4: Launch Neovim
