@@ -1,0 +1,57 @@
+# Lua / LuaRocks
+*.rock
+*.rockspec
+lua_modules/
+.luarocks/
+luarocks/
+manifest
+
+# Dependencies
+vendor/
+node_modules/
+
+# Build / generated files
+build/
+dist/
+bin/
+obj/
+target/
+*.o
+*.so
+*.dll
+*.dylib
+*.a
+
+# Test / coverage output
+coverage/
+luacov.stats.out
+luacov.report.out
+
+# Logs
+*.log
+
+# Temporary / backup files
+*.tmp
+*.temp
+*.bak
+*~
+.#*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment / local configuration
+.env
+.env.*
+!.env.example
+
+# Debug / profiling output
+*.prof
+*.trace
