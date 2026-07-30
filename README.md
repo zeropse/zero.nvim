@@ -119,6 +119,7 @@ The configuration requires:
 - **C compiler** such as GCC or Clang
 - **ripgrep** — required for live grep
 - **fd** — recommended for file searching
+- **lazygit** — recommended for floating Git terminal UI (`<leader>gg`)
 - **Nerd Font** — required for terminal icons
 
 Additional dependencies may be required by individual language servers, formatters, linters, or debuggers.
