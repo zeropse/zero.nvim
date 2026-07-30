@@ -1,4 +1,4 @@
-# ⚡ zero.nvim
+# zero.nvim
 
 <p align="left">
   <img src="https://img.shields.io/badge/Neovim-v0.10+-57AD31?style=for-the-badge&logo=neovim&logoColor=white" alt="Neovim Supported">
@@ -7,174 +7,158 @@
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License">
 </p>
 
-An all-in-one, production-grade, blazing fast Neovim configuration built on top of the **[LazyVim](https://github.com/LazyVim/LazyVim)** engine with automatic upstream updates, sub-millisecond async formatting, native debugging (DAP), and customized keybindings.
+A personal Neovim configuration built on [LazyVim](https://github.com/LazyVim/LazyVim), with LSP support, formatting, linting, debugging, fuzzy finding, file navigation, and customized keybindings.
 
----
+## Features
 
-## ✨ Features
+- **Plugin Management** — Uses LazyVim and `lazy.nvim` for plugin management and updates.
+- **Search and Navigation** — File search, live grep, buffers, and diagnostics through Telescope and Snacks.
+- **LSP and Formatting** — Language Server Protocol support through Mason and Neovim's LSP, with formatting through `conform.nvim` and configured linting tools.
+- **Debugging** — Debug Adapter Protocol support through `nvim-dap` for breakpoints, stepping, and interactive debugging.
+- **Diagnostics** — Workspace diagnostics, symbols, and quickfix functionality through `trouble.nvim`.
+- **Interface** — Nord colorscheme with configured transparency, Lualine, Bufferline, and Snacks dashboard.
+- **Keybindings** — Custom keybindings with interactive discovery through `which-key.nvim` and incremental renaming through `inc-rename.nvim`.
+- **Git Integration** — Git signs and LazyGit integration through the configured Git plugins.
 
-- **⚡ Automatic Upstream Updates**: Built-in update checker powered by `lazy.nvim` and LazyVim core engine (`:Lazy update`).
-- **🔍 Fast Search & Navigation**: Integrated fuzzy finding across files, live grep, buffers, and diagnostics via Telescope & Snacks.
-- **🛠️ Zero-Config LSP & Formatting**: Native LSP setup (`mason.nvim`), sub-millisecond async format-on-save (`conform.nvim`), and linting.
-- **🐛 Interactive Debugging (DAP)**: Native breakpoint, stepping, and REPL debugging support for Python, JS/TS, Go, Rust, and C++.
-- **🩺 Diagnostic & Symbol UI**: Visual workspace diagnostics, symbols outline, and quickfix windows via `trouble.nvim`.
-- **🎨 Modern Aesthetics**: Nord colorscheme with glassmorphism transparency, statuslines (`lualine`), buffer tabs (`bufferline`), and `snacks.nvim` dashboard.
-- **⌨️ Keybinding Discoverability**: Interactive keymapping popups via `which-key.nvim` plus live variable renaming (`inc-rename`).
-
----
-
-## 📁 Repository Layout
+## Repository Structure
 
 ```text
 zero.nvim/
-├── init.lua                   # Bootstrapping entry point
-├── .stylua.toml               # Lua formatting rules
-├── CHEATSHEET.md              # Complete keybinding reference guide
-├── README.md                  # Installation & documentation
+├── init.lua
+├── .stylua.toml
+├── CHEATSHEET.md
+├── README.md
 ├── .github/
 │   └── workflows/
-│       └── ci.yml             # GitHub Actions CI workflow (StyLua + Headless test)
+│       └── ci.yml
 └── lua/
     ├── config/
-    │   ├── autocmds.lua       # Custom autocommands
-    │   ├── keymaps.lua        # Custom keybindings (<C-s>, <leader>v, <C-h/j/k/l>, etc.)
-    │   ├── lazy.lua           # LazyVim engine setup & extras imports
-    │   └── options.lua        # Vim options (relativenumber, shiftwidth=4, etc.)
+    │   ├── autocmds.lua
+    │   ├── keymaps.lua
+    │   ├── lazy.lua
+    │   └── options.lua
     └── plugins/
-        ├── colorscheme.lua    # Nord theme configuration & transparent background
-        ├── git.lua            # Gitsigns & LazyGit integration
-        ├── inc-rename.lua     # Real-time incremental renaming (<leader>rn)
-        ├── neotree.lua        # NeoTree file explorer specs
-        ├── sleuth.lua         # Automatic indent tab size detection (tpope/vim-sleuth)
-        ├── telescope.lua      # Telescope search specs
-        └── ui.lua             # Snacks dashboard, Bufferline, and Lualine
+        ├── colorscheme.lua
+        ├── git.lua
+        ├── inc-rename.lua
+        ├── neotree.lua
+        ├── sleuth.lua
+        ├── telescope.lua
+        └── ui.lua
 ```
 
----
+### Configuration Overview
 
-## 🛠️ Prerequisites
+| Directory / File           | Purpose                                               |
+| :------------------------- | :---------------------------------------------------- |
+| `init.lua`                 | Main configuration entry point                        |
+| `lua/config/`              | Core Neovim configuration and LazyVim setup           |
+| `lua/plugins/`             | Plugin specifications and custom plugin configuration |
+| `CHEATSHEET.md`            | Keybinding and command reference                      |
+| `.stylua.toml`             | StyLua formatting configuration                       |
+| `.github/workflows/ci.yml` | GitHub Actions workflow for configuration checks      |
 
-Ensure you have the following installed on your system:
+## Requirements
 
-- **Neovim** `>= v0.10.0`
+The configuration requires:
+
+- **Neovim** `>= 0.10.0`
 - **Git**
-- **C Compiler** (`gcc`, `clang`, or `make`)
-- **ripgrep** (required for Telescope live grep)
-- **fd** (recommended for fast file search)
-- **Nerd Font** (e.g. *JetBrainsMono Nerd Font*)
+- **C compiler** such as GCC or Clang
+- **ripgrep** — required for live grep
+- **fd** — recommended for file searching
+- **Nerd Font** — required for terminal icons
 
----
+Additional dependencies may be required by individual language servers, formatters, linters, or debuggers.
 
-## 🚀 Installation
+## Installation
 
-Follow these steps to install and set up **`zero.nvim`** as your primary editor configuration.
+### macOS
 
-### Step 1: Install Dependencies
+Using Homebrew:
 
-**macOS (via Homebrew):**
 ```bash
 brew install neovim ripgrep fd gcc
 brew install --cask font-jetbrains-mono-nerd-font
 ```
 
-**Linux (Debian / Ubuntu / Arch):**
+### Arch Linux
+
 ```bash
-# Arch Linux
 sudo pacman -S neovim ripgrep fd gcc
-
-# Ubuntu / Debian
-sudo apt update && sudo apt install neovim ripgrep fd-find build-essential
 ```
 
----
-
-### Step 2: Backup Existing Neovim Setup
+### Ubuntu / Debian
 
 ```bash
-# Backup existing config
-mv ~/.config/nvim ~/.config/nvim.bak 2>/dev/null
-
-# Backup state and cache (optional fresh start)
-mv ~/.local/share/nvim ~/.local/share/nvim.bak 2>/dev/null
-mv ~/.local/state/nvim ~/.local/state/nvim.bak 2>/dev/null
+sudo apt update
+sudo apt install neovim ripgrep fd-find build-essential
 ```
 
----
+### Clone the Configuration
 
-### Step 3: Install `zero.nvim` to `~/.config/nvim`
+Clone the repository directly into Neovim's configuration directory:
 
-Choose one of the following methods:
-
-#### Option A: Copy Local Directory directly
 ```bash
-mkdir -p ~/.config
-cp -r /Users/zeropse/Developer/zero.nvim ~/.config/nvim
-```
-
-#### Option B: Clone directly from GitHub
-```bash
-mkdir -p ~/.config
 git clone https://github.com/zeropse/zero.nvim.git ~/.config/nvim
 ```
 
----
-
-### Step 4: Launch Neovim
+Launch Neovim:
 
 ```bash
 nvim
 ```
 
-On first launch, `lazy.nvim` automatically downloads all configured plugins, and `Mason` installs language servers, formatters, and debuggers in the background.
+On the first launch, LazyVim and `lazy.nvim` install the configured plugins. Mason then installs the configured language servers, formatters, linters, and debugging tools.
 
----
+## Supported Languages and Tooling
 
-## 🧰 Supported Languages & Tooling Ecosystem
+The configuration includes tooling for:
 
-`zero.nvim` includes pre-configured LazyVim extras for:
+| Language / Technology   | Tooling                                |
+| :---------------------- | :------------------------------------- |
+| JavaScript / TypeScript | TypeScript LSP, Prettier, Tailwind CSS |
+| React                   | JSX/TSX support and related tooling    |
+| Python                  | Pyright, Ruff formatter and linter     |
+| Rust                    | `rust-analyzer`, `rustfmt`             |
+| Markdown                | Enhanced syntax and Markdown tooling   |
+| JSON / YAML             | Schema validation and language support |
+| Docker                  | Dockerfile language support            |
+| Terraform               | HCL language support                   |
+| Debugging               | `nvim-dap`                             |
 
-- **TypeScript / JavaScript / React**: Prettier, TS-Server, TailwindCSS, JSX syntax.
-- **Python**: Pyright, Ruff formatter & linter.
-- **Rust**: `rustfmt` & `rust-analyzer`.
-- **Markdown**: Enhanced syntax, preview, and heading navigation.
-- **JSON / YAML**: SchemaStore validation.
-- **Docker / Terraform**: Dockerfile LSP and HCL syntax highlighting.
-- **Debugging**: `nvim-dap` core for breakpoints and stepping.
+The exact tools installed by Mason depend on the configured LazyVim extras and plugin specifications.
 
----
+## Keybindings
 
-## ⌨️ Keybindings Quick Reference
+For the complete list of keybindings, see [`CHEATSHEET.md`](./CHEATSHEET.md).
 
-> For the complete list of shortcuts, read **[CHEATSHEET.md](./CHEATSHEET.md)**.
+| Mode   | Shortcut                  | Description                            |
+| :----- | :------------------------ | :------------------------------------- |
+| Normal | `<C-s>`                   | Save file                              |
+| Normal | `<leader>v` / `<leader>h` | Split window vertically / horizontally |
+| Normal | `<C-h/j/k/l>`             | Navigate between split windows         |
+| Normal | `<Tab>` / `<S-Tab>`       | Next / previous buffer                 |
+| Normal | `<leader>e`               | Toggle Neo-tree                        |
+| Normal | `<leader>sf`              | Search files with Telescope            |
+| Normal | `<leader>sg`              | Live grep with Telescope               |
+| Normal | `<leader>f`               | Format buffer                          |
+| Normal | `<leader>rn`              | Incremental variable rename            |
+| Normal | `<leader>xx`              | Toggle workspace diagnostics           |
+| Normal | `<leader>db`              | Toggle debugger breakpoint             |
+| Normal | `<leader>gg`              | Open LazyGit                           |
 
-| Mode | Shortcut | Description |
-| :--- | :--- | :--- |
-| **Normal** | `<C-s>` | Save file |
-| **Normal** | `<leader>v` / `<leader>h` | Split window vertically / horizontally |
-| **Normal** | `<C-h/j/k/l>` | Navigate between split windows |
-| **Normal** | `<Tab>` / `<S-Tab>` | Next / Previous buffer tab |
-| **Normal** | `<leader>e` | Toggle NeoTree file explorer |
-| **Normal** | `<leader>sf` | Search files (Telescope) |
-| **Normal** | `<leader>sg` | Live grep workspace (Telescope) |
-| **Normal** | `<leader>f` | Format buffer (`conform.nvim`) |
-| **Normal** | `<leader>rn` | Incremental variable rename (`inc-rename`) |
-| **Normal** | `<leader>xx` | Toggle Workspace Diagnostics (`Trouble`) |
-| **Normal** | `<leader>db` | Toggle Debugger Breakpoint (`DAP`) |
-| **Normal** | `<leader>gg` | Open LazyGit floating terminal |
+## Management Commands
 
----
+The following commands are useful for managing the configuration from within Neovim:
 
-## ⚙️ Diagnostic & Management Commands
+| Command        | Description                                            |
+| :------------- | :----------------------------------------------------- |
+| `:Lazy`        | View plugins, logs, and available updates              |
+| `:Mason`       | Manage LSP servers, formatters, linters, and debuggers |
+| `:ConformInfo` | View formatters configured for the current buffer      |
+| `:checkhealth` | Check Neovim and plugin dependencies                   |
 
-Run these inside Neovim:
-
-- `:Lazy` — Plugin manager status, logs, and updates.
-- `:Mason` — View, install, or update LSPs, formatters, and debuggers.
-- `:ConformInfo` — Display active buffer formatters.
-- `:checkhealth` — Verify Neovim setup health and dependencies.
-
----
-
-## 📄 License
+## License
 
 MIT © zeropse
