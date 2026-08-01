@@ -1,6 +1,16 @@
-# zero.nvim
+<p align="center">
+  <img src="https://nvim.zeropse.me/favicon.ico" alt="zero.nvim logo" width="180">
+</p>
 
-<p align="left">
+<h1 align="center">zero.nvim</h1>
+
+<p align="center">
+  A minimal, powerful Neovim configuration built on <a href="https://github.com/LazyVim/LazyVim">LazyVim</a>,
+  featuring LSP support, formatting, linting, debugging, fuzzy finding, file navigation,
+  and custom keybindings.
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/badge/Neovim-57A143?style=for-the-badge&logo=neovim&logoColor=white" alt="Neovim">
   <img src="https://img.shields.io/badge/LazyVim-2E3440?style=for-the-badge&logo=neovim&logoColor=white" alt="LazyVim">
   <img src="https://img.shields.io/badge/Lua-2C2D72?style=for-the-badge&logo=lua&logoColor=white" alt="Lua">
@@ -8,8 +18,6 @@
   <img src="https://img.shields.io/badge/Mason-FFB000?style=for-the-badge&logo=neovim&logoColor=white" alt="Mason">
   <img src="https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge" alt="MIT License">
 </p>
-
-A personal Neovim configuration built on [LazyVim](https://github.com/LazyVim/LazyVim), with LSP support, formatting, linting, debugging, fuzzy finding, file navigation, and customized keybindings.
 
 ## Installation
 
